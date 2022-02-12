@@ -1,0 +1,40 @@
+.w-10 {
+    width: 10%;
+}
+
+
+h3::after{
+    content: "";
+
+    animation: typing infinite 2s ;
+}
+
+
+@keyframes typing {
+    0%{content:"a|"}
+    10%{content: "ay|";}
+    20%{content: "aya|";}
+    30%{content: "ay|";}
+    40%{content: "a|";}
+   90%{content: "a|";}
+   100%{content: "|";}
+}
+.feedback-h2{
+
+    position: relative;
+    padding: 10px 0;
+}
+.feedback-h2::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: teal;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.feedback img{
+    transform: translateY(-50%);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1 class="text-danger mt-5 ms-3">Bookmarker.</h1>
+    
+    <hr class="mt-5">
+    <div class="content bg-light">
+     <h2 class="text-center pt-5">Bookmark your favorite sites</h2>
+     <div class="ms-5 pb-5">
+     <div class="mb-3 ">
+        <label for="formGroupExampleInput" class="form-label text-center">Site Name</label>
+        <input type="text" class="form-control w-75" id="bookmarkName" placeholder="Bookmark name">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Site URL</label>
+        <input type="text" class="form-control w-75" id="WebsiteUrl" placeholder="website URL">
+      </div>
+      <button onclick="addSite()" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-light bg-light mt-4 container">
+  
+    <input onkeyup="search(this.value)" class="form-control mr-sm-2 w-50 offset-1" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-danger my-2 my-sm-0 me-4" type="submit">Search</button>
+ 
+</nav>
+<table class="container pt-5 bg-light mt-3">
+    <tbody id="tableBody">
+        
+    </tbody>
+</table>
+
+    
+   
+<hr class="mt-3 container">
+<footer>
+    <div class="container">
+    <p class="lead text-danger fw-bold">© 2019 Bookmarker Inc.</p>
+</div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
