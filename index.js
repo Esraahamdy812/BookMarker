@@ -1,12 +1,8 @@
 var siteName = document.getElementById("bookmarkName");
 var siteUrl = document.getElementById("WebsiteUrl");
 var siteContainer;
-//if local storage contains old data ,start from this data
 if (localStorage.getItem('sites') != null) {
     siteContainer = JSON.parse(localStorage.getItem('sites'));
-    // i want to make data disable when i open the browser
-    // the problem is data exists in local storage but not appear on the web page after opening
-    //the solution : we should call displaySites()
     displaySites();
 } else {
     siteContainer = [];
@@ -15,22 +11,14 @@ if (localStorage.getItem('sites') != null) {
 
 function addSite() {
     if (validate()) {
-        
-    
-    //اسحب الداتا من اليوزر بشكل مؤقت عشان اخزنها في الارراي
     var site = {
         name: siteName.value,
         uurl:siteUrl.value
     }
     siteContainer.push(site);
-    //add sites to local storage to take it from local storage and save it on the browser after closing it 
-    //setItem() requires string parameters so i used json to convert my array of objects to string
     localStorage.setItem('sites', JSON.stringify( siteContainer ));
-
-    //to clear inputs after clicking on submit
     clearInputs();
-    //to display
-        displaySites();
+    displaySites();
     } else {
         alert("all inputs are required !")
     }
@@ -47,12 +35,10 @@ function displaySites() {
     document.getElementById("tableBody").innerHTML = cartoona;
 }
 function clearInputs() {
-    //to make inputs empty
-     siteName.value = "";
+    siteName.value = "";
     siteUrl.value = "";
 }
 function deleteSite(index) {
-    //to delete self item
     siteContainer.splice(index, 1);
     displaySites();
 }
