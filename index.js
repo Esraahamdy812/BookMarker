@@ -26,7 +26,7 @@ function addSite() {
     //add sites to local storage to take it from local storage and save it on the browser after closing it 
     //setItem() requires string parameters so i used json to convert my array of objects to string
     localStorage.setItem('sites', JSON.stringify( siteContainer ));
-   //////////////////// // console.log(siteContainer);
+
     //to clear inputs after clicking on submit
     clearInputs();
     //to display
